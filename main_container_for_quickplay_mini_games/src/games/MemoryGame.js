@@ -317,6 +317,15 @@ const MemoryGame = () => {
                     height: `${gridConfig[difficulty].cardSize}px`,
                     width: `${gridConfig[difficulty].cardSize}px`
                   }}
+                  role="button"
+                  aria-pressed={card.isFlipped}
+                  aria-label={`Card ${index + 1}${card.isFlipped ? ', showing ' + card.symbol : ''}`}
+                  tabIndex={0}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handleCardClick(index);
+                    }
+                  }}
                 >
                   <div className="memory-card-inner">
                     <div className="memory-card-front">
@@ -345,6 +354,8 @@ const MemoryGame = () => {
             <div className="result-icon">🏆</div>
             <h3>Congratulations!</h3>
             <p>You've matched all the cards!</p>
+            <div className="celebration-confetti left"></div>
+            <div className="celebration-confetti right"></div>
             
             {isNewHighScore && (
               <div className="new-high-score">
