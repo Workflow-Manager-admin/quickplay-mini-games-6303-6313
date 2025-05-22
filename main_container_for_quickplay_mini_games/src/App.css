@@ -31,17 +31,18 @@ body {
 }
 
 .navbar {
-  background-color: var(--kavia-dark);
+  background-color: var(--primary-blue);
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--primary-blue-dark);
   position: fixed;
   top: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .logo {
@@ -50,10 +51,11 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: white;
 }
 
 .logo-symbol {
-  color: var(--kavia-orange);
+  color: white;
 }
 
 .container {
