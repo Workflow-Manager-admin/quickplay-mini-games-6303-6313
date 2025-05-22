@@ -503,8 +503,9 @@ const MemoryGame = () => {
           cursor: pointer;
           position: relative;
           transform-style: preserve-3d;
-          transition: transform 0.5s ease;
+          transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
           box-shadow: 0 4px 8px var(--shadow-color);
+          will-change: transform;
         }
         
         @media (max-width: 500px) {
