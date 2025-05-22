@@ -283,7 +283,17 @@ const MemoryGame = () => {
               </div>
               <div className="stat">
                 <span className="stat-label">Matched</span>
-                <span className="stat-value">{matchedPairs.length} / {cardSymbols.length}</span>
+                <span className="stat-value">
+                  <div className="progress-circle-container">
+                    <div className="progress-circle-bg">
+                      <div 
+                        className="progress-circle-fill" 
+                        style={{transform: `rotate(${(matchedPairs.length / cardSymbols.length) * 360}deg)`}}
+                      ></div>
+                    </div>
+                    <div className="progress-circle-text">{matchedPairs.length}/{cardSymbols.length}</div>
+                  </div>
+                </span>
               </div>
               <div className="stat">
                 <span className="stat-label">Time</span>
