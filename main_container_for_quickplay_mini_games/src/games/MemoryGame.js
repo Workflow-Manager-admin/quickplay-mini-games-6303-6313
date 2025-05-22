@@ -667,6 +667,31 @@ const MemoryGame = () => {
         .memory-game-restart {
           margin-top: 20px;
           transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .memory-game-restart:after {
+          content: "";
+          position: absolute;
+          top: -50%;
+          left: -60%;
+          width: 20px;
+          height: 200%;
+          background: rgba(255, 255, 255, 0.3);
+          transform: rotate(30deg);
+          transition: transform 0.6s;
+          opacity: 0;
+        }
+        
+        .memory-game-restart:hover:after {
+          transform: rotate(30deg) translateX(300px);
+          opacity: 1;
+        }
+        
+        .memory-game-restart:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);
         }
         
         .best-score {
