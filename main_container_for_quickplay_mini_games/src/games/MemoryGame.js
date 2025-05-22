@@ -532,7 +532,7 @@ const MemoryGame = () => {
         
         .memory-card.matched {
           box-shadow: 0 0 0 2px var(--success-color);
-          animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite, matched-celebration 0.5s;
         }
         
         @keyframes pulse {
@@ -544,6 +544,18 @@ const MemoryGame = () => {
           }
           100% {
             box-shadow: 0 0 0 2px var(--success-color);
+          }
+        }
+        
+        @keyframes matched-celebration {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
           }
         }
         
