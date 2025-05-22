@@ -812,10 +812,14 @@ const MemoryGame = () => {
         @media (max-width: 480px) {
           .memory-game-stats {
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
           }
           
           .memory-game-difficulty {
             flex-wrap: wrap;
+            padding: 5px;
           }
           
           .memory-card-symbol {
@@ -824,13 +828,49 @@ const MemoryGame = () => {
           
           .difficulty-btn {
             font-size: 0.8rem;
-            padding: 5px 12px;
+            padding: 5px 10px;
+            margin: 2px;
           }
           
           .best-score {
             font-size: 0.75rem;
             flex-direction: column;
             text-align: center;
+            padding: 8px 15px;
+          }
+          
+          .game-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          }
+          
+          .game-description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+          }
+          
+          .stat-value {
+            font-size: 1.2rem;
+          }
+          
+          .stat-label {
+            font-size: 0.75rem;
+          }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 360px) {
+          .memory-card {
+            height: 50px !important;
+            width: 50px !important;
+          }
+          
+          .memory-card-symbol {
+            font-size: 1.2rem;
+          }
+          
+          .memory-game-board {
+            gap: 8px;
           }
         }
       `}</style>
