@@ -568,6 +568,7 @@ const MemoryGame = () => {
         
         .memory-card-front {
           background: linear-gradient(135deg, var(--primary-blue-light), white);
+          box-shadow: inset 0 0 0 2px var(--primary-blue-light);
         }
         
         .memory-card-front::after {
@@ -586,8 +587,9 @@ const MemoryGame = () => {
         
         .memory-card-back {
           transform: rotateY(180deg);
-          background-color: var(--primary-blue-light);
+          background: linear-gradient(45deg, var(--primary-blue-light) 0%, #ffffff 100%);
           color: var(--primary-blue-dark);
+          box-shadow: inset 0 0 0 2px var(--primary-blue);
         }
         
         .memory-card-symbol {
