@@ -269,14 +269,16 @@ body {
 .mini-game-container {
   width: 100%;
   max-width: 900px;
-  background-color: var(--kavia-dark-lighter);
-  border-radius: 12px;
-  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  padding: 25px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border-left: 4px solid var(--primary-blue);
 }
 
 .mini-game-placeholder {
@@ -289,9 +291,16 @@ body {
 }
 
 .placeholder-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: var(--kavia-orange);
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  color: var(--primary-blue);
+  background-color: var(--primary-blue-light);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 /* Media Queries for Mobile Responsiveness */
