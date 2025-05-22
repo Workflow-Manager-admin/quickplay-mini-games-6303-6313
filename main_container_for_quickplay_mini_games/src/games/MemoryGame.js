@@ -645,6 +645,30 @@ const MemoryGame = () => {
           overflow: hidden;
         }
         
+        .memory-game-result::after {
+          content: '';
+          position: absolute;
+          top: -50px;
+          left: 0;
+          right: 0;
+          height: 50px;
+          background: 
+            radial-gradient(circle, var(--primary-blue) 8px, transparent 8px) 0 0/20px 20px,
+            radial-gradient(circle, var(--success-color) 8px, transparent 8px) 10px 10px/20px 20px;
+          animation: confetti-fall 3s linear infinite;
+          opacity: 0.7;
+          z-index: 1;
+        }
+        
+        @keyframes confetti-fall {
+          0% {
+            transform: translateY(-50px);
+          }
+          100% {
+            transform: translateY(600px);
+          }
+        }
+        
         .memory-game-result::before {
           content: '';
           position: absolute;
