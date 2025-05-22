@@ -576,6 +576,12 @@ const MemoryGame = () => {
           transform: translateY(-2px);
         }
         
+        .memory-card:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px var(--primary-blue), 0 4px 8px var(--shadow-color);
+          transform: translateY(-2px);
+        }
+        
         .memory-card.flipped {
           transform: rotateY(180deg);
         }
@@ -788,7 +794,32 @@ const MemoryGame = () => {
           color: white;
           font-weight: 600;
           border-radius: 20px;
-          animation: pulse-highlight 1.5s infinite;
+          animation: pulse-highlight 1.5s infinite, star-rotate 3s ease-in-out infinite alternate;
+          position: relative;
+        }
+        
+        .new-high-score:before,
+        .new-high-score:after {
+          content: "🌟";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          animation: star-bounce 2s ease infinite;
+        }
+        
+        .new-high-score:before {
+          left: -20px;
+          animation-delay: 0s;
+        }
+        
+        .new-high-score:after {
+          right: -20px;
+          animation-delay: 0.5s;
+        }
+        
+        @keyframes star-bounce {
+          0%, 100% { transform: translateY(-50%); }
+          50% { transform: translateY(-70%); }
         }
         
         @keyframes pulse-highlight {
