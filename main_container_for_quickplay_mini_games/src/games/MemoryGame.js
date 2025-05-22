@@ -498,6 +498,46 @@ const MemoryGame = () => {
           font-size: 1.4rem;
           font-weight: 600;
           color: var(--primary-blue-dark);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .progress-circle-container {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .progress-circle-bg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: #e0e0e0;
+          overflow: hidden;
+        }
+        
+        .progress-circle-fill {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          background-color: var(--primary-blue);
+          transform-origin: right center;
+          transition: transform 0.3s ease;
+        }
+        
+        .progress-circle-text {
+          position: relative;
+          z-index: 2;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--primary-blue-dark);
         }
         
         .memory-game-board {
