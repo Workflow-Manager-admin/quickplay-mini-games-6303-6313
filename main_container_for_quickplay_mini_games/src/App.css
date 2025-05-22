@@ -122,6 +122,38 @@ body {
   font-size: 1.1rem;
 }
 
+/* Quiz Game Specific Styling Updates */
+.quiz-option {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+  border-color: var(--primary-blue);
+  background-color: var(--background-light);
+}
+
+.quiz-option.selected {
+  border-color: var(--primary-blue);
+  background-color: var(--primary-blue-light);
+}
+
+.answer-item {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.progress-bar-container {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
+
+.progress-bar {
+  background-color: var(--primary-blue);
+}
+
 /* Game Container Styles */
 .games-container {
   display: flex;
