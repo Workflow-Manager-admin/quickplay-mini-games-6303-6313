@@ -356,19 +356,13 @@ body {
   opacity: 1;
 }
 
+/* Removed underline effect as requested */
 .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.2s ease;
+  display: none;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  display: none;
 }
 
 /* Footer Styles */
