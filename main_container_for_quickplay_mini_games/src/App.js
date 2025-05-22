@@ -1,36 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainContainer from './components/MainContainer';
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <nav className="navbar">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+    <Router>
+      <div className="app">
+        <nav className="navbar">
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+              <div className="logo">
+                <span className="logo-symbol">🎮</span> QuickPlay Mini Games
+              </div>
             </div>
-            <button className="btn">Template Button</button>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">main_container_for_quickplay_mini_games</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
+        <main>
+          <div className="container">
+            <MainContainer />
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </Router>
   );
 }
 
