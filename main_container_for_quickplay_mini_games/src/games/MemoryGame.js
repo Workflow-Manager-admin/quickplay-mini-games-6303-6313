@@ -761,6 +761,58 @@ const MemoryGame = () => {
           }
         }
         
+        .celebration-confetti {
+          position: absolute;
+          width: 10px;
+          height: 30px;
+          top: 0;
+          z-index: 10;
+        }
+        
+        .celebration-confetti.left {
+          left: 30px;
+          animation: confetti-diagonal-left 5s ease-in-out infinite;
+        }
+        
+        .celebration-confetti.right {
+          right: 30px;
+          animation: confetti-diagonal-right 5s ease-in-out infinite;
+        }
+        
+        .celebration-confetti:before {
+          content: '🎉';
+          position: absolute;
+          font-size: 2rem;
+        }
+        
+        @keyframes confetti-diagonal-left {
+          0% {
+            transform: translate(0, -50px) rotate(0deg);
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translate(-100px, 400px) rotate(-540deg);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes confetti-diagonal-right {
+          0% {
+            transform: translate(0, -50px) rotate(0deg);
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translate(100px, 400px) rotate(540deg);
+            opacity: 0;
+          }
+        }
+        
         .memory-game-result::before {
           content: '';
           position: absolute;
